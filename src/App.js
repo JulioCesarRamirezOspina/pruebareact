@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import formbricks from "@formbricks/js";
+import imagen from './ceremonia-23-sep-2023.png';
 import './App.css';
+import AudioPlayer from './components/AudioPlayer'; // Asume que AudioPlayer está en el mismo directorio
+import sampleAudio from './laSendaInca.mp3';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 }
 
 export default App;

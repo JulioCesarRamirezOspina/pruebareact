@@ -1,0 +1,110 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Horizontal por defecto */
+    /* Fondo oscuro */
+    background: #271850;
+    height: 100vh;
+  }
+  
+  
+  
+  .video-wrapper {
+    flex: 1; /* En pantallas grandes toma la mitad del ancho */
+  }
+  
+  .video {
+    width: 100vh;
+    height: 100vh;
+    object-fit: contain;
+  }
+  
+  .container .form-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Esto debería centrar el contenido verticalmente */
+    align-items: center;
+    padding: 20px;
+    color: white; /* Texto blanco */
+  }
+  
+  /* Estilos para los input */
+  .container .form-wrapper input[type="text"] {
+    width: 100%; /* Ocupar el 80% del ancho disponible */
+    padding: 10px;
+    margin: 10px 0; /* Espacio arriba y abajo de cada input */
+    border-color: rgb(80, 51, 160); /* Cambiar el color del borde al enfocar */
+    box-shadow: 0 0 10px rgba(80, 51, 160, 0.5);
+    border: 2px solid white; /* Borde blanco */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    font-size: 16px;
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+    outline: none; /* Remover el resaltado predeterminado del navegador al enfocar el input */
+  }
+  
+  /* Estilo para el input cuando está enfocado */
+  .container .form-wrapper input[type="text"]:focus {
+    border: 2px solid white;
+    background-color: transparent;
+    border-color: rgb(80, 51, 160); /* Cambiar el color del borde al enfocar */
+    box-shadow: 0 0 10px rgba(80, 51, 160, 0.5); /* Sombra sutil alrededor del input para mejor realce */
+  }
+  
+  /* Estilos para el botón */
+  .container .form-wrapper button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #483285; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 18px;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar el mouse por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+  
+    display: inline-block; /* Este estilo asegura que el botón respete la alineación del texto */
+  
+  }
+  /* Estilo para el contenedor del botón */
+  .container .form-wrapper form {
+    text-align: right;
+  }
+  
+  /* Estilo para el botón al pasar el mouse por encima */
+  .container .form-wrapper button:hover {
+    background-color: #5033a0; /* Fondo azul oscuro */
+  }
+  
+  .container-botones {
+    padding: 50px;
+    display: inline-block;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* En pantallas pequeñas, se apilan verticalmente */
+    }
+    .video-wrapper {
+        order: -1; /* Asegura que el vídeo esté arriba en dispositivos móviles */
+    }
+    .video {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+    .form-wrapper {
+        /* Ajustes para garantizar que el formulario esté centrado en la vertical en móviles */
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .container-botones {
+      padding: 30px;
+    }
+  }
+  
