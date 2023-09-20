@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import formbricks from "@formbricks/js";
-import imagen from './ceremonia-23-sep-2023.png';
+import React from 'react';
 import './App.css';
-import AudioPlayer from './components/AudioPlayer'; // Asume que AudioPlayer está en el mismo directorio
-import sampleAudio from './laSendaInca.mp3';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Qr from './pages/Qr';
+import Fin from './pages/Fin';
+import NoPage from './pages/NoPage';
 
 function App() {
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="blogs" element={<Blogs />} />
-        <Route path="contact" element={<Contact />} />
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/qr" element={<Qr />} />
+        <Route path="/fin" element={<Fin />} />
         <Route path="*" element={<NoPage />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
