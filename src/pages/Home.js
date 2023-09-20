@@ -41,7 +41,7 @@ function Home() {
 
                 <form onSubmit={handleSubmit}>
                     <input placeholder="Nombres y Apellidos" type="text" value={nombreApellido} onChange={e => setNombreApellido(e.target.value)} />
-                    <input placeholder="Teléfono" type="text" value={telefono} onChange={e => setTelefono(e.target.value)} />
+                    <input placeholder="Teléfono" type="number" value={telefono} onChange={e => setTelefono(e.target.value)} />
                     <br></br>
                     <button type="submit">Enviar</button>
                 </form>

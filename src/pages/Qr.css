@@ -1,17 +1,37 @@
 .container-qr {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; /* Horizontal por defecto */
-    /* Fondo oscuro */
-    background: #271850;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: #271850; 
+    height: 100vh; 
+    width: 100%;
     color: white;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.container-qr h1 {
+    margin-bottom: 20px;
 }
 
 .container-qr .imagen {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 50%; /* Este es un ejemplo. Ajusta según la necesidad */
+    height: auto;
+    display: block; 
+    margin: 0 auto; /* Esto centrará la imagen horizontalmente si el contenedor no es flex. */
+}
+.enlaces {
+    display: flex;
+}
+.enlace{
+    display: inline-block;
+    margin: 10px;
+    color: white;
+}
+@media (min-width: 790px) {
+    .container-qr .imagen {
+        max-width: 40%; /* o cualquier otro valor que funcione para ti */
+        height: auto;
+    }
 }
