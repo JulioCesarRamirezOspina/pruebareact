@@ -70,8 +70,13 @@ img,
 }
 
 .container-botones {
-  padding: 30px;
-  display: inline-block;
+  position: absolute;   /* Posicionamiento absoluto */
+  bottom: 10px;         /* Distancia desde la parte inferior */
+  left: 0;              /* Alinear desde la izquierda */
+  right: 30px;             /* Alinear desde la derecha */
+  margin: auto;         /* Centrar horizontalmente */
+  display: flex;
+  justify-content: center; /* Asegurar que los botones estén centrados */
 }
 
 @media (max-width: 1140px) {
@@ -99,11 +104,13 @@ img,
   }
   /* Estilos para los controles de reproducción en la esquina inferior derecha */
   .container-botones {
-    position: absolute;
-    right: 5px; /* Ajusta según necesidad */
-    bottom: 5px; /* Ajusta según necesidad */
-    padding: 3px; /* Ajusta según necesidad */
-    display: flex; /* Cambia a flex */
-    justify-content: flex-end;
+    position: absolute;   /* Posicionamiento absoluto */
+    bottom: 10px;         /* Distancia desde la parte inferior */
+    left: 0;              /* Alinear desde la izquierda */
+    right: 0;             /* Alinear desde la derecha */
+    margin: auto;         /* Centrar horizontalmente */
+    display: flex;
+    justify-content: center; /* Asegurar que los botones estén centrados */
+    padding: 0;            /* Puedes ajustar esto si es necesario */
   }
 }

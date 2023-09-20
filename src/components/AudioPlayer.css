@@ -30,4 +30,6 @@
   .control-btn:active {
     background-color: #111;
   }
-  
+  audio {
+    opacity: 0.8; /* Ajusta este valor según tus necesidades */
+  }

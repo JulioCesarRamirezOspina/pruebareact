@@ -9,7 +9,7 @@ function Home() {
     useEffect(() => {
         if (typeof window !== "undefined") {
             formbricks.init({
-                environmentId: "clmqbjgrl00qvpi3ndjqg3p2e",
+                environmentId: "clms3n3oz0003nz3juhrvy371",
                 apiHost: "https://forms.yosoft.app",
                 debug: false, // remove when in production 
             });
@@ -34,10 +34,13 @@ function Home() {
         <div className="container">
             <div className="video-wrapper">
                 <img alt='ceremonia' src={imagen} className="video"></img>
+                <div className="container-botones">
+                    <AudioPlayer src={sampleAudio} />
+                </div>
             </div>
             <div className="form-wrapper">
                 <h3>Ceremonia Ancestral de Yage</h3>
-                <h2>Registro</h2>
+                <h4>Registro</h4>
 
                 <form onSubmit={handleSubmit}>
                     <input placeholder="Nombres y Apellidos" type="text" value={nombreApellido} onChange={e => setNombreApellido(e.target.value)} />
@@ -45,9 +48,6 @@ function Home() {
                     <br></br>
                     <button type="submit">Enviar</button>
                 </form>
-                <div className="container-botones">
-                    <AudioPlayer src={sampleAudio} />
-                </div>
             </div>
         </div>
     );
