@@ -6,6 +6,7 @@ import Qr from './pages/Qr';
 import Fin from './pages/Fin';
 import NoPage from './pages/NoPage';
 import Mapa from './pages/Mapa';
+import MapaWaze from './pages/MapaWaze';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/qr" element={<Qr />} />
         <Route path="/mapa" element={<Mapa />} />
+        <Route path="/mapa-waze" element={<MapaWaze />} />
         <Route path="/fin" element={<Fin />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
