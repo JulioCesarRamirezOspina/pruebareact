@@ -4,6 +4,7 @@ import imagen from '../assets/ceremonia-23-sep-2023.png';
 import './Home.css';
 import AudioPlayer from '../components/AudioPlayer'; // Asume que AudioPlayer está en el mismo directorio
 import sampleAudio from '../assets/laSendaInca.mp3';
+import { Link } from 'react-router-dom';
 
 function Home() {
     useEffect(() => {
@@ -48,6 +49,7 @@ function Home() {
                     <br></br>
                     <button type="submit">Enviar</button>
                 </form>
+                <Link to="/mapa">🗺️ Ubicación</Link>
             </div>
         </div>
     );

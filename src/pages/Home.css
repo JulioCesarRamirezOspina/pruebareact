@@ -79,6 +79,19 @@ img,
   justify-content: center; /* Asegurar que los botones estén centrados */
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* hover del enlace  y escale con animacion*/
+a:hover {
+  color: #f2a365;
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+}
+
 @media (max-width: 1140px) {
   .container {
     flex-direction: column; /* Cambiar a columna para dispositivos menores de 1140px */
